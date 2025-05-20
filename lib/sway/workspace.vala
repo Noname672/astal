@@ -4,6 +4,7 @@ public class Workspace : Node {
     public bool focused { get; private set; }
     public bool visible { get; private set; }
     public int num { get; private set; }
+    public string output { get; private set; }
 
     public Workspace() {
         node_type = NodeType.WORKSPACE;
@@ -24,6 +25,7 @@ public class Workspace : Node {
         focused = obj.get_boolean_member("focused");
         visible = obj.get_boolean_member("visible");
         num = (int)obj.get_int_member("num");
+        output = obj.get_string_member("output");
     }
 
     public override void focus() {
