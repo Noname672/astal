@@ -19,6 +19,7 @@ public class Container : Node {
         floating = obj.get_string_member("type") == "floating_con";
         fullscreen_mode = (int)obj.get_int_member("fullscreen_mode");
         percent = (float)obj.get_double_member("percent");
+        focused = obj.get_boolean_member("focused");
 
         base.sync(obj);
     }
